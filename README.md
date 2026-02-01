@@ -172,7 +172,7 @@ sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
 
 ### Enable Support for ntfs-3g and exfat:
 ```
-sudo dnf install exfatprogs ntfs-3g
+sudo dnf install exfatprogs ntfs-3g ntfsprogs
 ```
 
 ### Enable Trim Support
@@ -194,6 +194,9 @@ sudo systemctl disable NetworkManager-wait-online.service
 ```
 
 ### Better Linux Disk Caching & Performance with vm.dirty_ratio & vm.dirty_background_ratio & Sharply reduce swap inclination
+```
+sudo nano /etc/sysctl.conf
+```
 ```
 vm.swappiness=1
 vm.vfs_cache_pressure=100
